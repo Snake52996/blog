@@ -57,25 +57,25 @@
 		  
 		  <li>
 			<a href="/blog/archives" title="All articles.">
-			  <i class="fa fa-archive"></i>Archives
+			  <i class=""></i>Archives
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/blog/categories" title="All categories.">
-			  <i class="fa fa-folder"></i>Categories
+			  <i class=""></i>Categories
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/blog/tags" title="All tags.">
-			  <i class="fa fa-tags"></i>Tags
+			  <i class=""></i>Tags
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/blog/about" title="About me.">
-			  <i class="fa fa-user"></i>About
+			  <i class=""></i>About
 			</a>
 		  </li>
 		  
@@ -97,14 +97,53 @@
 	<div class="col-md-9">
 	
 
-		<div class="slogan">
+		
+<div class="slogan">
 
+		<i class="fa fa-comment-o blink-slow"></i>
 
-		<i class="fa fa-heart blink-slow"></i>
+		<span id="slogan">DETERMINATION</span>
+</div>
+<script type="text/javascript">
+	var a_idx = 0;
+	var a = new Array("宣纸泛黄，时间流逝，即使眨眼即过，也要抓住那瞬间的辉煌。",
+					"我们一路奋战，不是为了改变世界，而是为了不让世界改变我们。",
+					"(」・ω・)」うー！(／・ω・)／にゃー！",
+					"即使你忘记了我，我也不会遗忘你。",
+					"因为喜欢你，所以想继续相信下去。",
+					"正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。",
+					"也许正义并非太阳，而是如同星星一般的东西，天空中有无数的星星，彼此不断抵消着其他星星的光芒。",
+					"我不相信人类......但是，我相信人类的“可能性”",
+					"正是在对未来没有任何希望的时候，一个人能坚持到什么地步，才真正体现出这个人有多坚强。",
+					"我们虽然距离很远很远，非常非常的远，但是思念或许真的可以穿越时间和距离。",
+					"无法飞翔的翅膀也是有意义的，因为它是曾经翱翔于天空所留下的珍贵回忆。",
+					"虚伪的眼泪，会伤害别人，虚伪的笑容，会伤害自己。",
+					"伤害别人的人，就要有被伤害的觉悟",
+					"有阳光的地方就会有阴影，所以有阴影的地方也一定会有阳光。绝望的颜色越是浓厚，在那里也一定会存在耀眼的希望之光。",
+					"正因生来一无所有，因此我们能拥有一切。",
+					"败者死于绝望，胜者死于渴望。美丽的不是这个世界，而是接受了这个世界的你的眼睛。",
+					"梦想是否无聊并不是别人来决定的，不管是什么样的梦想，自己拼命努力去追寻才是最重要的。",	
+					"活在现实中的人是错的，而那些哭泣的人才是正确的，孤独的我们才有人类的样子。",
+					"只有用心才能看到本质，最重要的东西眼睛是无法看到的。",
+					"时间并不存在，存在的只有此刻。",
+					"所谓“大家”，就是无视并牺牲了一部分弱势群体后所达到的虚伪的和平与共识。",
+					"就算是自私……我也希望那些人能够永远都有笑容……",
+					"梦存高远，志在争霸，这股热情确实值得赞许。但所谓梦，终有一天是要醒来的。",
+					"我有在反省，但我不后悔。",
+					"什么都无法舍弃的人，什么都无法改变。",
+					"悲伤教会了我喜悦。",
+					"用你的笑容去改变这个世界，别让这个世界改变了你的笑容。",
+					"一个人走在路上，形单影只。回首望去，大家都留在远方。回过头来继续前行，这便是所谓坚强。",
+					"我只对现实世界绝望过，却未对自己绝望过",
+					"若隐若现才是艺术"
+					); 
+	a_idx = Math.floor(Math.random() * a.length);
+	var temp_text=a[a_idx];
+	$(document).ready(function(){
+	$("#slogan").text(temp_text);
+	});
+</script>
 
-		DETERMINATION
-
-</div>    
 
 		<div id="top_search"></div>
 		<div class="mypage">
@@ -127,21 +166,7 @@
 	
 
 
-			<!--
-<div class="entry">
-  <div class="row">
-	
-	
-		<p>尽头之塔正在进行全面的改造,随时可能在内部遇到不连续空间区域,目标地点错误的传送门,异常的装饰等等.施工作业正在有序进行中,带来的不便敬请谅解.<br>在此次改造之后,全新的区域:尽头之塔的图书馆将正式开放,敬请期待.</p>
-
-	
-
-	</div>
-  <a type="button" href="/blog/2020/07/03/施工通知/#more" class="btn btn-default more">Read More</a>
-</div>
-
--->
-<div class="entry">
+			<div class="entry">
   <div class="row">
 	
 	
@@ -149,7 +174,6 @@
 
 	
 	</div>
-  <!--<a type="button" href="/blog/2020/07/03/施工通知/#more" class="btn btn-default more">Read More</a>-->
 </div>
 
 		
@@ -226,9 +250,11 @@
   <div class="container-narrow">
   <footer> <p>
   
-  &copy; 2020 Snake's Blog
+  &copy; 2020 Snake
   
-      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p><br />
+<p>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
 </p>
  </footer>
 </div> <!-- container-narrow -->
