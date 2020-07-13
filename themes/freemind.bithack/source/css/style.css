@@ -4,16 +4,6 @@
   background-color: white;
   color: black;
 }
-span.s-darkness{
-	filter: blur(0.5rem);
-	transition-duration: 0.4s;
-}
-span.s-darkness:hover{
-    filter: none;
-}
-span.s-darkness.lit{
-    filter: none;
-}
 /**/
 .container-narrow {
     margin: 0 auto;
