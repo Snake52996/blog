@@ -6,15 +6,15 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>施工通知 | Snake的尽头之塔</title>
+  <title>Effective C++读书笔记 | Snake的尽头之塔</title>
   <meta name="author" content="Snake">
   
-  <meta name="description" content="尽头之塔正在进行全面的改造,随时可能在内部遇到不连续空间区域,目标地点错误的传送门,异常的装饰等等.施工作业正在有序进行中,带来的不便敬请谅解.在此次改造之后,全新的区域:尽头之塔的图书馆将正式开放,敬请期待."> 
+  <meta name="description" content="Effective C++读书笔记Effective C++可谓是学习C++的必读经典书目,Effective C++: 55 Specific Ways to Improve Your Programs and Designs, Third Edition为其作者Scott Douglas Meyers于2005年对1991年完成初版, 1997年修订第二版的本书的再次改进与补充."> 
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="施工通知"/>
+  <meta property="og:title" content="Effective C++读书笔记"/>
   <meta property="og:site_name" content="Snake的尽头之塔"/>
 
   
@@ -94,7 +94,7 @@
 
 	
 		<div class="page-header">
-			<h1> 施工通知</h1>
+			<h1> Effective C++读书笔记</h1>
 		</div>
 	
 
@@ -111,8 +111,15 @@
 	<div class="mypage">		
 	  		
 
-	  <p>尽头之塔正在进行全面的改造,随时可能在内部遇到不连续空间区域,目标地点错误的传送门,异常的装饰等等.施工作业正在有序进行中,带来的不便敬请谅解.<br>在此次改造之后,全新的区域:尽头之塔的图书馆将正式开放,敬请期待.</p>
+	  <h1 id="Effective-C-读书笔记"><a href="#Effective-C-读书笔记" class="headerlink" title="Effective C++读书笔记"></a><em>Effective C++</em>读书笔记</h1><p><em>Effective C++</em>可谓是学习C++的必读经典书目,<em>Effective C++: 55 Specific Ways to Improve Your Programs and Designs, Third Edition</em>为其作者Scott Douglas Meyers于2005年对1991年完成初版, 1997年修订第二版的本书的再次改进与补充.</p>
+<a id="more"></a>
 
+<h2 id="Accustoming-Yourself-to-C-让自己习惯C"><a href="#Accustoming-Yourself-to-C-让自己习惯C" class="headerlink" title="Accustoming Yourself to C++: 让自己习惯C++"></a>Accustoming Yourself to C++: 让自己习惯C++</h2><p>“习惯”可能代表着了解C++的基本特性, 用C++的风格而不是别的来编写C++程序.</p>
+<h3 id="View-C-as-a-federation-of-languages-把C-视为多种子语言组成的联盟"><a href="#View-C-as-a-federation-of-languages-把C-视为多种子语言组成的联盟" class="headerlink" title="View C++ as a federation of languages: 把C++视为多种子语言组成的联盟"></a>View C++ as a federation of languages: 把C++视为多种子语言组成的联盟</h3><p>Scott Meyers在书中表示他认为C++由四种子语言组成, 分别为C, 面向对象的C++, 模板C++和STL C++. 或许随着时间的流逝, 语言的发展, 这种分类已经不再完全和恰当, 但毫无疑问C++仍然是一种多范式的编程语言, 在其不同的编程范式中应用的策略将会有所不同.</p>
+<h3 id="Prefer-consts-enums-and-inlines-to-defines-尽量使用const常量-enum枚举类型和inline内联函数来替代宏定义"><a href="#Prefer-consts-enums-and-inlines-to-defines-尽量使用const常量-enum枚举类型和inline内联函数来替代宏定义" class="headerlink" title="Prefer consts, enums, and inlines to #defines: 尽量使用const常量, enum枚举类型和inline内联函数来替代宏定义"></a>Prefer consts, enums, and inlines to #defines: 尽量使用const常量, enum枚举类型和inline内联函数来替代宏定义</h3><p>总而言之, 尽可能减轻预处理器的工作量, 将工作交给编译器来处理. 宏定义的问题主要在于其字符串替换的实现方式导致了可能出现通常是输入相关的多次执行等副作用, 调试更加困难, 并且不受到任何作用域的控制, 可能导致莫名其妙的编译错误. 相对的, 使用const常量定义”具名常量”(可读的常量, 而不是magic number), 保证在多处使用相同的值并避免同一常量的多个拷贝; 使用inline内联函数来实现”无需函数调用的函数”均达到了对应情形下宏定义的目标, 且它们在其他方面将会像是普通的变量/函数一样的工作和被对待(例如类型检查, 例如按值/按引用传递, 作用域), 使得这些依靠编译器的方式相比宏定义更加安全.<br>有些编译器可能会在有些情况下拒绝编译使用const常量作为定义的数组长度的代码, 书中介绍了一种被称为<em>enum hack</em>的技巧:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> &#123;ARRAY_SIZE = <span class="number">810</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> arr[ARRAY_SIZE];</span><br></pre></td></tr></table></figure>
+<p>来绕过这种限制.</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
 	  
 	</div>
 
@@ -124,13 +131,13 @@
 
     
     
-    <a href="/blog/2020/08/20/Effective-C-读书笔记/" type="button" class="btn btn-default"><i
-                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>Prev</a>
     
 
     <a href="/blog/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
     
-    <a type="button" class="btn btn-default disabled">Next<i class="fa fa-arrow-circle-o-right"></i></a>
+    <a href="/blog/2020/07/03/施工通知/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
     
 
     
@@ -1399,7 +1406,7 @@ var gitalk = new Gitalk({
   repo: 'blog',
   owner: 'Snake52996',
   admin: ['Snake52996'],
-  id: md5('2020/07/03/施工通知/'),
+  id: md5('2020/08/20/Effective-C-读书笔记/'),
   distractionFreeMode: true
 });
 gitalk.render('gitalk-container');
@@ -1418,12 +1425,23 @@ gitalk.render('gitalk-container');
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2020-07-03 
+	2020-08-20 
 	</div>
 	
 
 	<!-- categories -->
     
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/blog/categories/读书笔记/">读书笔记<span>1</span></a></li> <li><a href="/blog/categories/读书笔记/Effective-C/">Effective C++<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
 
 	<!-- tags -->
 		
